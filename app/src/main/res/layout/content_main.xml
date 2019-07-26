@@ -10,12 +10,51 @@
         tools:context=".MainActivity">
 
     <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/fortune_description"
+            android:textSize="@dimen/description_text_size"/>
+    <ImageView
+            android:id="@+id/fortunateImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/descriptionText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/img_crystal"/>
+    <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fortuneText"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/fortunateImage"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="@dimen/fortune_text_size"
+            android:textStyle="bold"/>
+    <Button
+            android:text="What's my fortune?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fortuneButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/fortuneText"
+            android:layout_marginTop="30dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
